@@ -16,6 +16,18 @@ namespace StarChart.Controllers
         {
             _context = parameters;
         }
+
+        [HttpGet("{id:int}")]
+        public IActionResult GetById(int id)
+        {
+            var records = _context.CelestialObjects.Where(e => e.Id == id).FirstOrDefault();
+            if (records == null)
+            {
+                return NotFound();
+            }
+            records.OrbitalPeriod   = 
+            return Ok()
+        }
     }
 }
 
