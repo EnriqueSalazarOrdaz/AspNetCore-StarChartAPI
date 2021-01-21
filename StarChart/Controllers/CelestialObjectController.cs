@@ -25,8 +25,8 @@ namespace StarChart.Controllers
             {
                 return NotFound();
             }
-            records.OrbitalPeriod   = 
-            return Ok()
+            //records.OrbitalPeriod = System.TimeSpan.FromDays();
+            return Ok();
         }
     }
 }
